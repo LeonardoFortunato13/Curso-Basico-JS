@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 07 - Somando Numeros</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+            display: flex;
+            color: rgb(251, 251, 251);
+            background-color: rgb(22, 22, 22);
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+        }
+
+        input {
+            width: 100px;
+            font: normal 18pt Arial;
+        }
+
+        #container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-style: solid;
+            margin: 1rem;
+            padding: 3rem;
+            border-radius: 15px;
+        }
+
+        #containerSomaValores {
+            align-items: baseline;
+        }
+
+        #resultado {
+            margin-top: 20px;
+        }
+
+        #buttonSomar {
+            background-color: rgb(255, 148, 41);
+            color: rgb(251, 251, 251);
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="container">
+        <h1>Somando valores</h1>
+
+        <div id="containerSomaValores">
+            <input type="number" name="txtn1" id="txtn1">
+            <input type="number" name="txtn2" id="txtn2">
+            <input type="button" value="Somar" id="buttonSomar" onclick="somar()">
+        </div>
+
+        <div id="resultado">Resultado</div>
+    </div>
+
+    <script>
+        function somar() {
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.getElementById('txtn2')
+            var res = window.document.getElementById('resultado')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+            res.innerHTML = `A soma de ${n1} + ${n2} resultou em <strong>${s}</strong>`
+
+        }
+    </script>
+</body>
+
+</html>
